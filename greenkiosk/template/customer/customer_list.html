@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Customer List</title>
 </head>
 <body>
-    <h3>Product List</h3>
+    <h3>Customer List</h3>
     <table>
         <th>
             <td>Name</td>
             <td>Description</td>
             <td>Price</td>
         </th>
-{% for product in product%}
+{% for customer in customer%}
 <tr>
-    <td>{{product.name}}</td>
-    <td>{{product.description}}</td>
-    <td>{{product.price}}</td>
-    <td><a href="{%url product details id=product.id%}">View product</a></td>
+    <td>{{customer.name}}</td>
+    <td>{{customer.description}}</td>
+    <td>{{customer.price}}</td>
+    <td><a href="{%url customer details id=customer.id%}">View customer</a></td>
 </tr>
 {% endfor %}
     </table>
