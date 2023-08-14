@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vendor List</title>
+</head>
+<body>
+    <h3>vendor List</h3>
+    <table>
+        <th>
+            <td>Name</td>
+            <td>Description</td>
+            <td>Price</td>
+        </th>
+{% for vendor in vendor%}
+<tr>
+    <td>{{vendor.name}}</td>
+    <td>{{vendor.description}}</td>
+    <td>{{vendor.price}}</td>
+    <td><a href="{%url vendor details id=vendor.id%}">View vendor</a></td>
+</tr>
+{% endfor %}
+    </table>
+</body>
+</html>

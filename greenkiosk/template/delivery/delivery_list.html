@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery List</title>
+</head>
+<body>
+    <h3>Delivery List</h3>
+    <table>
+        <th>
+            <td>Name</td>
+            <td>Description</td>
+            <td>Price</td>
+        </th>
+{% for delivery in delivery%}
+<tr>
+    <td>{{delivery.name}}</td>
+    <td>{{delivery.description}}</td>
+    <td>{{delivery.price}}</td>
+    <td><a href="{%url delivery details id=customer.id%}">View delivery</a></td>
+</tr>
+{% endfor %}
+    </table>
+</body>
+</html>

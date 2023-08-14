@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location List</title>
+</head>
+<body>
+    <h3>location List</h3>
+    <table>
+        <th>
+            <td>Name</td>
+            <td>Description</td>
+            <td>Price</td>
+        </th>
+{% for location in locationr%}
+<tr>
+    <td>{{location.name}}</td>
+    <td>{{location.description}}</td>
+    <td>{{location.price}}</td>
+    <td><a href="{%url location details id=customer.id%}">View location</a></td>
+</tr>
+{% endfor %}
+    </table>
+</body>
+</html>

@@ -6,19 +6,19 @@
     <title>Customer List</title>
 </head>
 <body>
-    <h3>Customer List</h3>
+    <h3>product List</h3>
     <table>
         <th>
             <td>Name</td>
             <td>Description</td>
             <td>Price</td>
         </th>
-{% for customer in customer%}
+{% for product in product%}
 <tr>
-    <td>{{customer.name}}</td>
-    <td>{{customer.description}}</td>
-    <td>{{customer.price}}</td>
-    <td><a href="{%url customer details id=customer.id%}">View customer</a></td>
+    <td>{{product.name}}</td>
+    <td>{{product.description}}</td>
+    <td>{{product.price}}</td>
+    <td><a href="{%url product details id=product.id%}">View product/a></td>
 </tr>
 {% endfor %}
     </table>
